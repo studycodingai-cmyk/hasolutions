@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #070b14;
+  --bg-surface: #0c1322;
+  --bg-surface-elevated: #111b30;
+  --border-subtle: rgba(148, 163, 184, 0.12);
+  --border-accent: rgba(6, 182, 212, 0.3);
+  --accent-cyan: #06b6d4;
+  --accent-cyan-glow: rgba(6, 182, 212, 0.25);
+}
+
+body {
+  background-color: #070b14;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Blueprint Enterprise Grid Background */
+.bg-tech-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dense {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(6, 182, 212, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.06) 1px, transparent 1px);
+}
+
+/* Ambient Radial Glows */
+.hero-glow-radial {
+  background: radial-gradient(circle at 60% 40%, rgba(6, 182, 212, 0.15) 0%, rgba(14, 165, 233, 0.05) 35%, rgba(7, 11, 20, 0) 70%);
+}
+
+.section-glow-radial {
+  background: radial-gradient(ellipse at center, rgba(6, 182, 212, 0.08) 0%, rgba(7, 11, 20, 0) 70%);
+}
+
+/* Glowing text and borders */
+.glow-cyan-text {
+  text-shadow: 0 0 24px rgba(34, 211, 238, 0.4);
+}
+
+.glow-cyan-box {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.35);
+}
+
+.glow-cyan-box-sm {
+  box-shadow: 0 0 15px -2px rgba(6, 182, 212, 0.3);
+}
+
+/* Pulsing radar animations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070b14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
