@@ -1,4 +1,4 @@
-allowBuilds:
-  '@parcel/watcher': set this to true or false
-  sharp: false
-  unrs-resolver: false
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - sharp
+  - unrs-resolver
