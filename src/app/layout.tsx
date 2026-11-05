@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     languages: {
       "vi-VN": "https://ha-solutions.tech",
       "en-US": "https://ha-solutions.tech",
+      "zh-CN": "https://ha-solutions.tech",
     },
   },
   openGraph: {

@@ -87,6 +87,18 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
               >
                 EN
               </button>
+              <button
+                type="button"
+                onClick={() => setLocale("zh")}
+                className={`px-2.5 py-1 rounded-full transition-all cursor-pointer font-bold ${
+                  locale === "zh"
+                    ? "bg-cyan-400 text-slate-950 shadow-[0_0_10px_rgba(34,211,238,0.5)]"
+                    : "text-slate-400 hover:text-white"
+                }`}
+                title="中文"
+              >
+                中文
+              </button>
             </div>
 
             {/* PRIMARY CTA BUTTON */}
@@ -123,6 +135,17 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
                 }`}
               >
                 EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLocale("zh")}
+                className={`px-2 py-0.5 rounded-full transition-all font-bold ${
+                  locale === "zh"
+                    ? "bg-cyan-400 text-slate-950"
+                    : "text-slate-400"
+                }`}
+              >
+                中
               </button>
             </div>
 

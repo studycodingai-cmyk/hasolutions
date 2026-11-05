@@ -22,7 +22,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     // Check localStorage on client mount
     try {
       const saved = localStorage.getItem(STORAGE_KEY) as Locale | null;
-      if (saved === "en" || saved === "vi") {
+      if (saved === "en" || saved === "vi" || saved === "zh") {
         setLocaleState(saved);
       }
     } catch {
@@ -40,7 +40,9 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleLocale = () => {
-    setLocale(locale === "vi" ? "en" : "vi");
+    if (locale === "vi") setLocale("en");
+    else if (locale === "en") setLocale("zh");
+    else setLocale("vi");
   };
 
   const t = translations[locale];

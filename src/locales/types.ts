@@ -1,4 +1,4 @@
-export type Locale = "en" | "vi";
+export type Locale = "en" | "vi" | "zh";
 
 export interface NavigationContent {
   home: string;
