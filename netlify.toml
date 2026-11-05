@@ -3,5 +3,5 @@
   publish = "out"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   PNPM_FLAGS = "--no-frozen-lockfile"
