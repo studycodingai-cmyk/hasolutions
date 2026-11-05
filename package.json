@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "./node_modules/.bin/tailwindcss -i src/app/globals.css -o src/app/globals.built.css && next dev",
-    "build": "./node_modules/.bin/tailwindcss -i src/app/globals.css -o src/app/globals.built.css && next build",
+    "dev": "tailwindcss -i src/app/globals.css -o src/app/globals.built.css && next dev",
+    "build": "tailwindcss -i src/app/globals.css -o src/app/globals.built.css && next build",
     "start": "next start",
     "lint": "eslint"
   },
