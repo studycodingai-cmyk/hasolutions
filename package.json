@@ -24,13 +24,5 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@11.9.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher"
-    ],
-    "approvedBuilds": [
-      "@parcel/watcher"
-    ]
-  }
+  "packageManager": "pnpm@11.9.0"
 }
