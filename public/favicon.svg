@@ -1,21 +1,4 @@
 <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="haGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#38bdf8" />
-      <stop offset="50%" stopColor="#22d3ee" />
-      <stop offset="100%" stopColor="#0d9488" />
-    </linearGradient>
-    <linearGradient id="haCoreGlow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stopColor="#67e8f9" />
-      <stop offset="100%" stopColor="#06b6d4" />
-    </linearGradient>
-  </defs>
-  <rect x="2" y="2" width="40" height="40" rx="12" fill="#080e1d" stroke="#22d3ee" stroke-width="2" />
-  <path d="M12 12V32" stroke="url(#haGradient)" stroke-width="3" stroke-linecap="round" />
-  <path d="M21 12V32" stroke="url(#haGradient)" stroke-width="3" stroke-linecap="round" />
-  <path d="M12 22H21" stroke="url(#haCoreGlow)" stroke-width="2.5" stroke-linecap="round" />
-  <path d="M21 12L31 32" stroke="url(#haGradient)" stroke-width="3" stroke-linecap="round" />
-  <path d="M19 25H27.5" stroke="url(#haCoreGlow)" stroke-width="2" stroke-linecap="round" />
-  <circle cx="21" cy="12" r="3" fill="#22d3ee" />
-  <circle cx="21" cy="12" r="1.5" fill="#ffffff" />
+  <rect x="2" y="2" width="40" height="40" rx="12" fill="#070b14" stroke="#22d3ee" stroke-width="2" />
+  <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" fill="#22d3ee" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="18" letter-spacing="-1">HA</text>
 </svg>
