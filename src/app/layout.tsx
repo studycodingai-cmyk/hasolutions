@@ -26,6 +26,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className="scroll-smooth antialiased dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function removeNetlifyBadge() {
+                  var b = document.getElementById('nl-badge-frame') || document.getElementById('nl-hud-frame');
+                  if (b) b.remove();
+                }
+                if (typeof window !== 'undefined') {
+                  var obs = new MutationObserver(removeNetlifyBadge);
+                  obs.observe(document.documentElement, { childList: true, subtree: true });
+                  window.addEventListener('DOMContentLoaded', removeNetlifyBadge);
+                  window.addEventListener('load', removeNetlifyBadge);
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-[#070b14] text-slate-100 font-sans selection:bg-cyan-500/25 selection:text-cyan-200 overflow-x-hidden">
         <LanguageProvider>{children}</LanguageProvider>
       </body>
