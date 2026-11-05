@@ -1,0 +1,96 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="65%" fx="60%" fy="40%">
+      <stop offset="0%" stop-color="#083344" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#0b172a" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#070b14" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Deep Dark Tech Background -->
+  <rect width="1200" height="630" fill="#070b14"/>
+  <rect width="1200" height="630" fill="url(#bgGlow)"/>
+
+  <!-- Blueprint Enterprise Grid Lines -->
+  <g opacity="0.12" stroke="#06b6d4" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Outer Orbit Nodes Graphic (Right side) -->
+  <g transform="translate(900, 315)">
+    <circle r="220" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.3"/>
+    <circle r="150" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.2"/>
+    <circle r="70" fill="#091426" stroke="#22d3ee" stroke-width="3" filter="url(#glow)"/>
+    <text x="0" y="8" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="28" text-anchor="middle" letter-spacing="2">HA</text>
+    
+    <!-- Satellites -->
+    <line x1="0" y1="0" x2="160" y2="-90" stroke="#22d3ee" stroke-width="2" opacity="0.6"/>
+    <circle cx="160" cy="-90" r="16" fill="#0b1b36" stroke="#22d3ee" stroke-width="2"/>
+    
+    <line x1="0" y1="0" x2="-140" y2="-120" stroke="#2dd4bf" stroke-width="2" opacity="0.6"/>
+    <circle cx="-140" cy="-120" r="16" fill="#0b1b36" stroke="#2dd4bf" stroke-width="2"/>
+
+    <line x1="0" y1="0" x2="170" y2="100" stroke="#06b6d4" stroke-width="2" opacity="0.6"/>
+    <circle cx="170" cy="100" r="16" fill="#0b1b36" stroke="#06b6d4" stroke-width="2"/>
+
+    <line x1="0" y1="0" x2="-150" y2="110" stroke="#38bdf8" stroke-width="2" opacity="0.6"/>
+    <circle cx="-150" cy="110" r="16" fill="#0b1b36" stroke="#38bdf8" stroke-width="2"/>
+  </g>
+
+  <!-- Left Content Info -->
+  <g transform="translate(100, 100)">
+    <!-- Brand Badge -->
+    <rect x="0" y="0" width="310" height="42" rx="21" fill="#0c1d38" stroke="#06b6d4" stroke-width="1.5"/>
+    <circle cx="24" cy="21" r="5" fill="#22d3ee"/>
+    <text x="40" y="27" fill="#22d3ee" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="700" font-size="14" letter-spacing="2">ĐỐI TÁC CÔNG NGHỆ B2B</text>
+
+    <!-- Main Title -->
+    <text x="0" y="125" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="64" letter-spacing="-1">
+      HA-SOLUTIONS
+    </text>
+
+    <!-- Tagline Highlight -->
+    <text x="0" y="195" fill="url(#cyanGrad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="34">
+      Chuyển Đổi Số &amp; Hệ Thống AI Thực Tiễn
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="260" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="500" font-size="20">
+      <tspan x="0" dy="0">Hiện đại hóa vận hành, tự động hóa quy trình nghiệp vụ,</tspan>
+      <tspan x="0" dy="32">và tích hợp giải pháp phần mềm kiến trúc mở cho doanh nghiệp.</tspan>
+    </text>
+
+    <!-- Metrics Footer -->
+    <g transform="translate(0, 360)">
+      <rect x="0" y="0" width="180" height="70" rx="12" fill="#0a1529" stroke="#1e293b" stroke-width="1"/>
+      <text x="24" y="32" fill="#22d3ee" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22">60%+</text>
+      <text x="24" y="52" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">TIẾT KIỆM CHI PHÍ</text>
+
+      <rect x="200" y="0" width="180" height="70" rx="12" fill="#0a1529" stroke="#1e293b" stroke-width="1"/>
+      <text x="224" y="32" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22">10x</text>
+      <text x="224" y="52" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">TỐC ĐỘ XỬ LÝ</text>
+
+      <rect x="400" y="0" width="220" height="70" rx="12" fill="#0a1529" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="424" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18">ha-solutions.tech</text>
+      <text x="424" y="52" fill="#2dd4bf" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">OFFICIAL WEBSITE</text>
+    </g>
+  </g>
+</svg>

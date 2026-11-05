@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ha-solutions.tech
+
+# Sitemaps
+Sitemap: https://ha-solutions.tech/sitemap.xml

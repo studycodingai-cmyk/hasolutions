@@ -3,14 +3,104 @@ import "./globals.built.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ha-solutions.tech"),
   title: "HA-SOLUTIONS | Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
   description: "HA-SOLUTIONS đồng hành cùng doanh nghiệp hiện đại hóa vận hành, tinh gọn quy trình, kết nối hệ sinh thái phần mềm và ứng dụng trí tuệ nhân tạo (AI) thực tiễn.",
-  keywords: ["chuyển đổi số", "phần mềm doanh nghiệp", "tự động hóa AI", "tích hợp hệ thống", "HA-SOLUTIONS", "digital transformation"],
-  authors: [{ name: "HA-SOLUTIONS" }],
+  keywords: [
+    "chuyển đổi số",
+    "phần mềm doanh nghiệp",
+    "tự động hóa AI",
+    "tích hợp hệ thống",
+    "HA-SOLUTIONS",
+    "digital transformation",
+    "enterprise AI",
+    "custom software"
+  ],
+  authors: [{ name: "HA-SOLUTIONS", url: "https://ha-solutions.tech" }],
+  creator: "HA-SOLUTIONS",
+  publisher: "HA-SOLUTIONS",
   icons: {
     icon: "/favicon.svg",
     apple: "/logo.svg",
   },
+  alternates: {
+    canonical: "https://ha-solutions.tech",
+    languages: {
+      "vi-VN": "https://ha-solutions.tech",
+      "en-US": "https://ha-solutions.tech",
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "vi_VN",
+    url: "https://ha-solutions.tech",
+    siteName: "HA-SOLUTIONS",
+    title: "HA-SOLUTIONS | Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+    description: "HA-SOLUTIONS đồng hành cùng doanh nghiệp hiện đại hóa vận hành, tinh gọn quy trình, kết nối hệ sinh thái phần mềm và ứng dụng trí tuệ nhân tạo (AI) thực tiễn.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "HA-SOLUTIONS - Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HA-SOLUTIONS | Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+    description: "HA-SOLUTIONS đồng hành cùng doanh nghiệp hiện đại hóa vận hành, tinh gọn quy trình, kết nối hệ sinh thái phần mềm và ứng dụng trí tuệ nhân tạo (AI) thực tiễn.",
+    images: ["/og-image.png"],
+    creator: "@ha_solutions",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ha-solutions.tech/#organization",
+      "name": "HA-SOLUTIONS",
+      "url": "https://ha-solutions.tech",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://ha-solutions.tech/#logo",
+        "url": "https://ha-solutions.tech/logo.svg",
+        "caption": "HA-SOLUTIONS Logo",
+      },
+      "image": "https://ha-solutions.tech/og-image.png",
+      "description": "Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+      "email": "contact@ha-solutions.tech",
+      "sameAs": [],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://ha-solutions.tech/#service",
+      "name": "HA-SOLUTIONS - Tư Vấn Chuyển Đổi Số & Giải Pháp AI Doanh Nghiệp",
+      "url": "https://ha-solutions.tech",
+      "logo": "https://ha-solutions.tech/logo.svg",
+      "image": "https://ha-solutions.tech/og-image.png",
+      "description": "Tư vấn kiến trúc giải pháp, thiết kế hệ thống phần mềm may đo, tự động hóa quy trình nghiệp vụ và tích hợp Agentic AI cho doanh nghiệp.",
+      "email": "contact@ha-solutions.tech",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "VN",
+      },
+      "priceRange": "$$",
+    },
+  ],
 };
 
 export const viewport: Viewport = {
@@ -27,6 +117,10 @@ export default function RootLayout({
   return (
     <html lang="vi" className="scroll-smooth antialiased dark">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
