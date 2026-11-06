@@ -186,11 +186,11 @@ export default function ConsultationModal({
                   onChange={(e) => setFormState({ ...formState, service: e.target.value })}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 >
-                  <option value="Digital Transformation">Digital Transformation</option>
-                  <option value="AI Solutions & Intelligent Automation">AI & Automation</option>
-                  <option value="System Integration">System Integration</option>
-                  <option value="Custom Software Development">Custom Software Development</option>
-                  <option value="Operational Readiness Audit">Readiness & Architecture Audit</option>
+                  {t.modal.servicesList.map((s) => (
+                    <option key={s.val} value={s.val}>
+                      {s.label}
+                    </option>
+                  ))}
                 </select>
               </div>
 

@@ -1001,6 +1001,13 @@ export const en: TranslationDictionary = {
     emailLabel: "Corporate Email *",
     companyLabel: "Company Name *",
     serviceLabel: "Primary Area",
+    servicesList: [
+      { label: "Digital Transformation", val: "Digital Transformation" },
+      { label: "AI Solutions & Intelligent Automation", val: "AI Solutions & Intelligent Automation" },
+      { label: "System Integration", val: "System Integration" },
+      { label: "Custom Software Development", val: "Custom Software Development" },
+      { label: "Readiness & Architecture Audit", val: "Operational Readiness Audit" },
+    ],
     notesLabel: "Brief Overview of Your Objectives",
     notesPlaceholder:
       "Share any specific workflows, systems, or goals you'd like to modernize...",

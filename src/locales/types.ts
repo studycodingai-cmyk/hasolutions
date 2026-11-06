@@ -302,6 +302,7 @@ export interface ModalContent {
   emailLabel: string;
   companyLabel: string;
   serviceLabel: string;
+  servicesList: { label: string; val: string }[];
   notesLabel: string;
   notesPlaceholder: string;
   submitBtn: string;

@@ -1001,6 +1001,13 @@ export const vi: TranslationDictionary = {
     emailLabel: "Email Doanh Nghiệp *",
     companyLabel: "Tên Công Ty *",
     serviceLabel: "Lĩnh Vực Quan Tâm",
+    servicesList: [
+      { label: "Chuyển Đổi Số Quy Trình", val: "Digital Transformation" },
+      { label: "Giải Pháp AI & Tự Động Hóa Thông Minh", val: "AI Solutions & Intelligent Automation" },
+      { label: "Tích Hợp Hệ Thống Phần Mềm", val: "System Integration" },
+      { label: "Phát Triển Phần Mềm May Đo", val: "Custom Software Development" },
+      { label: "Khảo Sát & Tư Vấn Kiến Trúc Tổng Thể", val: "Operational Readiness Audit" },
+    ],
     notesLabel: "Mục Tiêu Hoặc Bài Toán Cần Giải Quyết",
     notesPlaceholder:
       "Chia sẻ ngắn về quy trình, hệ thống hoặc mục tiêu bạn muốn tối ưu hóa...",

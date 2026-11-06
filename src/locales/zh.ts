@@ -973,6 +973,13 @@ export const zh: TranslationDictionary = {
     emailLabel: "企业工作邮箱 *",
     companyLabel: "企业/公司名称 *",
     serviceLabel: "重点关注领域",
+    servicesList: [
+      { label: "企业业务流程数字化转型", val: "Digital Transformation" },
+      { label: "企业级 AI 解决方案与智能自动化", val: "AI Solutions & Intelligent Automation" },
+      { label: "异构多系统深度集成与数据打通", val: "System Integration" },
+      { label: "专属核心业务系统定制开发", val: "Custom Software Development" },
+      { label: "全景流程与系统架构诊断咨询", val: "Operational Readiness Audit" },
+    ],
     notesLabel: "核心需求或待解决的业务课题",
     notesPlaceholder:
       "简要阐述您希望优化打通的业务流程、现有系统或期望达成的商业目标...",
