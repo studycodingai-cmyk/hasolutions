@@ -270,6 +270,8 @@ export interface FinalCTAContent {
     title: string;
     nameLabel: string;
     namePlaceholder: string;
+    phoneLabel: string;
+    phonePlaceholder: string;
     emailLabel: string;
     emailPlaceholder: string;
     companyLabel: string;
@@ -295,6 +297,8 @@ export interface ModalContent {
   title: string;
   subtitle: string;
   nameLabel: string;
+  phoneLabel: string;
+  phonePlaceholder: string;
   emailLabel: string;
   companyLabel: string;
   serviceLabel: string;

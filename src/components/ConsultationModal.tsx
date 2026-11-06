@@ -19,6 +19,7 @@ export default function ConsultationModal({
   const { t } = useLanguage();
   const [formState, setFormState] = useState({
     name: "",
+    phone: "",
     email: "",
     company: "",
     service: preselectedTopic || "Digital Transformation",
@@ -59,6 +60,7 @@ export default function ConsultationModal({
 
     const result = await submitConsultationRequest({
       name: formState.name,
+      phone: formState.phone,
       email: formState.email,
       company: formState.company,
       service: formState.service,
@@ -125,11 +127,27 @@ export default function ConsultationModal({
                     required
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    placeholder="e.g. Alex Morgan"
+                    placeholder={t.modal.nameLabel.includes("Họ") ? "ví dụ: Nguyễn Văn An" : "e.g. Alex Morgan"}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
 
+                <div>
+                  <label className="block text-xs font-semibold text-slate-300 mb-1">
+                    {t.modal.phoneLabel}
+                  </label>
+                  <input
+                    type="tel"
+                    required
+                    value={formState.phone}
+                    onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+                    placeholder={t.modal.phonePlaceholder}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
                     {t.modal.emailLabel}
@@ -143,9 +161,7 @@ export default function ConsultationModal({
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
-              </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 <div>
                   <label className="block text-xs font-semibold text-slate-300 mb-1">
                     {t.modal.companyLabel}
@@ -159,23 +175,23 @@ export default function ConsultationModal({
                     className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                   />
                 </div>
+              </div>
 
-                <div>
-                  <label className="block text-xs font-semibold text-slate-300 mb-1">
-                    {t.modal.serviceLabel}
-                  </label>
-                  <select
-                    value={formState.service}
-                    onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                  >
-                    <option value="Digital Transformation">Digital Transformation</option>
-                    <option value="AI Solutions & Intelligent Automation">AI & Automation</option>
-                    <option value="System Integration">System Integration</option>
-                    <option value="Custom Software Development">Custom Software Development</option>
-                    <option value="Operational Readiness Audit">Readiness & Architecture Audit</option>
-                  </select>
-                </div>
+              <div>
+                <label className="block text-xs font-semibold text-slate-300 mb-1">
+                  {t.modal.serviceLabel}
+                </label>
+                <select
+                  value={formState.service}
+                  onChange={(e) => setFormState({ ...formState, service: e.target.value })}
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                >
+                  <option value="Digital Transformation">Digital Transformation</option>
+                  <option value="AI Solutions & Intelligent Automation">AI & Automation</option>
+                  <option value="System Integration">System Integration</option>
+                  <option value="Custom Software Development">Custom Software Development</option>
+                  <option value="Operational Readiness Audit">Readiness & Architecture Audit</option>
+                </select>
               </div>
 
               <div>

@@ -16,6 +16,7 @@ export default function FinalCTA() {
   const { t } = useLanguage();
   const [formState, setFormState] = useState({
     name: "",
+    phone: "",
     email: "",
     company: "",
     service: "Digital Transformation",
@@ -32,6 +33,7 @@ export default function FinalCTA() {
 
     const result = await submitConsultationRequest({
       name: formState.name,
+      phone: formState.phone,
       email: formState.email,
       company: formState.company,
       service: formState.service,
@@ -149,6 +151,22 @@ export default function FinalCTA() {
 
                     <div>
                       <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                        {t.finalCta.form.phoneLabel}
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={formState.phone}
+                        onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+                        placeholder={t.finalCta.form.phonePlaceholder}
+                        className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
                         {t.finalCta.form.emailLabel}
                       </label>
                       <input
@@ -160,9 +178,7 @@ export default function FinalCTA() {
                         className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                       />
                     </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-medium text-slate-300 mb-1.5">
                         {t.finalCta.form.companyLabel}
@@ -176,23 +192,23 @@ export default function FinalCTA() {
                         className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
                       />
                     </div>
+                  </div>
 
-                    <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        {t.finalCta.form.serviceLabel}
-                      </label>
-                      <select
-                        value={formState.service}
-                        onChange={(e) => setFormState({ ...formState, service: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                      >
-                        {t.finalCta.form.servicesList.map((s) => (
-                          <option key={s.val} value={s.val}>
-                            {s.label}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                  <div>
+                    <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                      {t.finalCta.form.serviceLabel}
+                    </label>
+                    <select
+                      value={formState.service}
+                      onChange={(e) => setFormState({ ...formState, service: e.target.value })}
+                      className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                    >
+                      {t.finalCta.form.servicesList.map((s) => (
+                        <option key={s.val} value={s.val}>
+                          {s.label}
+                        </option>
+                      ))}
+                    </select>
                   </div>
 
                   <div>

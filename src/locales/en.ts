@@ -952,6 +952,8 @@ export const en: TranslationDictionary = {
       title: "Schedule a Consultation",
       nameLabel: "Your Full Name *",
       namePlaceholder: "e.g. Alex Morgan",
+      phoneLabel: "Phone / WhatsApp *",
+      phonePlaceholder: "e.g. +84 912 345 678",
       emailLabel: "Work Email Address *",
       emailPlaceholder: "alex@company.com",
       companyLabel: "Company / Organization *",
@@ -994,6 +996,8 @@ export const en: TranslationDictionary = {
     subtitle:
       "Connect with an enterprise technologist to discuss your operational challenges and feasibility.",
     nameLabel: "Full Name *",
+    phoneLabel: "Phone / WhatsApp *",
+    phonePlaceholder: "e.g. +84 912 345 678",
     emailLabel: "Corporate Email *",
     companyLabel: "Company Name *",
     serviceLabel: "Primary Area",

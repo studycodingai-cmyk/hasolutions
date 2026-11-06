@@ -1,5 +1,6 @@
 export interface FormPayload {
   name: string;
+  phone?: string;
   email: string;
   company: string;
   service: string;
@@ -29,6 +30,7 @@ export async function submitConsultationRequest(payload: FormPayload): Promise<{
           subject: `[cungcapgiaiphap.com] Yêu cầu tư vấn mới từ ${payload.name} (${payload.company})`,
           from_name: "cungcapgiaiphap.com",
           name: payload.name,
+          phone: payload.phone || "Chưa cung cấp",
           email: payload.email,
           company: payload.company,
           service: payload.service,
@@ -54,6 +56,7 @@ export async function submitConsultationRequest(payload: FormPayload): Promise<{
     const netlifyBody = new URLSearchParams({
       "form-name": "tu-van",
       name: payload.name,
+      phone: payload.phone || "",
       email: payload.email,
       company: payload.company,
       service: payload.service,

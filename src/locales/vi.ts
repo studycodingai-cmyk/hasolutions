@@ -952,6 +952,8 @@ export const vi: TranslationDictionary = {
       title: "Đặt Lịch Tư Vấn",
       nameLabel: "Họ và Tên của Bạn *",
       namePlaceholder: "ví dụ: Nguyễn Văn An",
+      phoneLabel: "Số Điện Thoại / Zalo *",
+      phonePlaceholder: "ví dụ: 0912 345 678",
       emailLabel: "Email Doanh Nghiệp *",
       emailPlaceholder: "an.nguyen@company.com",
       companyLabel: "Tên Doanh Nghiệp / Tổ Chức *",
@@ -994,6 +996,8 @@ export const vi: TranslationDictionary = {
     subtitle:
       "Trao đổi trực tiếp cùng chuyên gia công nghệ về tính khả thi và giải pháp tháo gỡ khó khăn cho doanh nghiệp.",
     nameLabel: "Họ và Tên *",
+    phoneLabel: "Số Điện Thoại / Zalo *",
+    phonePlaceholder: "ví dụ: 0912 345 678",
     emailLabel: "Email Doanh Nghiệp *",
     companyLabel: "Tên Công Ty *",
     serviceLabel: "Lĩnh Vực Quan Tâm",

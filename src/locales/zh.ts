@@ -933,6 +933,8 @@ export const zh: TranslationDictionary = {
       title: "预约技术专家咨询",
       nameLabel: "您的姓名 *",
       namePlaceholder: "例如：张明 (David Zhang)",
+      phoneLabel: "联系电话 / 微信 *",
+      phonePlaceholder: "请输入手机号或微信号",
       emailLabel: "企业工作邮箱 *",
       emailPlaceholder: "david.zhang@company.com",
       companyLabel: "企业/机构全称 *",
@@ -966,6 +968,8 @@ export const zh: TranslationDictionary = {
     subtitle:
       "与资深技术专家直接对话，论证技术可行性并量身规划破局方案。",
     nameLabel: "您的姓名 *",
+    phoneLabel: "联系电话 / 微信 *",
+    phonePlaceholder: "请输入手机号或微信号",
     emailLabel: "企业工作邮箱 *",
     companyLabel: "企业/公司名称 *",
     serviceLabel: "重点关注领域",
