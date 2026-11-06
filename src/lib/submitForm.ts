@@ -15,7 +15,7 @@ export async function submitConsultationRequest(payload: FormPayload): Promise<{
   const timestamp = new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" });
   let hasSuccess = false;
 
-  // 1. Submit to Web3Forms (Delivers directly to studycodingai@gmail.com)
+  // 1. Submit to Web3Forms (Delivers directly to your private inbox via Access Key)
   if (WEB3FORMS_ACCESS_KEY) {
     try {
       const w3Res = await fetch("https://api.web3forms.com/submit", {
@@ -81,7 +81,7 @@ export async function submitConsultationRequest(payload: FormPayload): Promise<{
 
   return { 
     ok: false, 
-    error: "Không thể kết nối đến máy chủ tiếp nhận lúc này. Vui lòng thử lại hoặc gửi email trực tiếp tới studycodingai@gmail.com" 
+    error: "Không thể kết nối đến máy chủ tiếp nhận lúc này. Vui lòng thử lại sau ít phút!" 
   };
 }
 

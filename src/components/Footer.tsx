@@ -37,7 +37,7 @@ export default function Footer() {
                 {t.footer.supportingStatement}
               </p>
               <div className="mt-3 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 font-mono">
-                Email: <a href="mailto:studycodingai@gmail.com" className="text-cyan-300 hover:underline">studycodingai@gmail.com</a>
+                Email: <a href="mailto:contact@cungcapgiaiphap.com" className="text-cyan-300 hover:underline">contact@cungcapgiaiphap.com</a>
               </div>
             </div>
           </div>
