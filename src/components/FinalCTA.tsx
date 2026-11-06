@@ -10,6 +10,7 @@ import {
   Lock
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { submitConsultationRequest } from "@/lib/submitForm";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -22,35 +23,28 @@ export default function FinalCTA() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    try {
-      await fetch("https://formsubmit.co/ajax/studycodingai@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: `[cungcapgiaiphap.com] Yêu cầu tư vấn mới từ ${formState.name} - ${formState.company}`,
-          _template: "table",
-          _captcha: "false",
-          "Họ và tên": formState.name,
-          "Email liên hệ": formState.email,
-          "Doanh nghiệp / Tổ chức": formState.company,
-          "Lĩnh vực quan tâm": formState.service,
-          "Thách thức / Mục tiêu": formState.challenge || "Không có ghi chú thêm",
-          "Nguồn gửi": "Form Chân Trang (FinalCTA) - https://cungcapgiaiphap.com",
-          "Thời gian gửi": new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
-        }),
-      });
-    } catch (err) {
-      console.error("Submission error:", err);
-    } finally {
-      setIsSubmitting(false);
+    setErrorMessage(null);
+
+    const result = await submitConsultationRequest({
+      name: formState.name,
+      email: formState.email,
+      company: formState.company,
+      service: formState.service,
+      message: formState.challenge,
+      source: "Form Chân Trang (FinalCTA) - https://cungcapgiaiphap.com",
+    });
+
+    setIsSubmitting(false);
+
+    if (result.ok) {
       setIsSubmitted(true);
+    } else {
+      setErrorMessage(result.error || "Có lỗi xảy ra khi gửi yêu cầu.");
     }
   };
 
@@ -213,6 +207,12 @@ export default function FinalCTA() {
                       className="w-full px-4 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                     />
                   </div>
+
+                  {errorMessage && (
+                    <div className="p-3 rounded-xl bg-rose-950/50 border border-rose-500/40 text-xs text-rose-300 text-center leading-relaxed">
+                      {errorMessage}
+                    </div>
+                  )}
 
                   <button
                     type="submit"

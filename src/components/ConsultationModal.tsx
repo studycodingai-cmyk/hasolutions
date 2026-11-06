@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { X, ArrowRight, CheckCircle2, Clock, Lock } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { submitConsultationRequest } from "@/lib/submitForm";
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -25,6 +26,7 @@ export default function ConsultationModal({
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     if (preselectedTopic) {
@@ -53,36 +55,29 @@ export default function ConsultationModal({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    try {
-      await fetch("https://formsubmit.co/ajax/studycodingai@gmail.com", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          _subject: `[cungcapgiaiphap.com] Đặt lịch tư vấn (Modal) từ ${formState.name} - ${formState.company}`,
-          _template: "table",
-          _captcha: "false",
-          "Họ và tên": formState.name,
-          "Email liên hệ": formState.email,
-          "Doanh nghiệp / Tổ chức": formState.company,
-          "Lĩnh vực quan tâm": formState.service,
-          "Mục tiêu / Ghi chú": formState.notes || "Không có ghi chú thêm",
-          "Nguồn gửi": "Modal Đặt Lịch Tư Vấn - https://cungcapgiaiphap.com",
-          "Thời gian gửi": new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
-        }),
-      });
-    } catch (err) {
-      console.error("Submission error:", err);
-    } finally {
-      setIsSubmitting(false);
+    setErrorMessage(null);
+
+    const result = await submitConsultationRequest({
+      name: formState.name,
+      email: formState.email,
+      company: formState.company,
+      service: formState.service,
+      message: formState.notes,
+      source: "Modal Đặt Lịch Tư Vấn - https://cungcapgiaiphap.com",
+    });
+
+    setIsSubmitting(false);
+
+    if (result.ok) {
       setIsSubmitted(true);
+    } else {
+      setErrorMessage(result.error || "Có lỗi xảy ra khi gửi yêu cầu.");
     }
   };
 
   const handleResetAndClose = () => {
     setIsSubmitted(false);
+    setErrorMessage(null);
     onClose();
   };
 
@@ -195,6 +190,12 @@ export default function ConsultationModal({
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#070d18] border border-slate-700 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
                 />
               </div>
+
+              {errorMessage && (
+                <div className="p-3 rounded-xl bg-rose-950/50 border border-rose-500/40 text-xs text-rose-300 text-center leading-relaxed">
+                  {errorMessage}
+                </div>
+              )}
 
               <div className="pt-2">
                 <button
