@@ -88,9 +88,10 @@
       <text x="224" y="32" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="22">10x</text>
       <text x="224" y="52" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">TỐC ĐỘ XỬ LÝ</text>
 
-      <rect x="400" y="0" width="220" height="70" rx="12" fill="#0a1529" stroke="#06b6d4" stroke-width="1.5"/>
-      <text x="424" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="18">ha-solutions.tech</text>
-      <text x="424" y="52" fill="#2dd4bf" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">OFFICIAL WEBSITE</text>
+      <rect x="400" y="0" width="250" height="70" rx="12" fill="#0a1529" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="420" y="32" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="16">cungcapgiaiphap.com</text>
+      <text x="420" y="52" fill="#2dd4bf" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="11">OFFICIAL WEBSITE</text>
     </g>
   </g>
 </svg>
+

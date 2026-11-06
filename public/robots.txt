@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ha-solutions.tech
+Host: https://cungcapgiaiphap.com
 
 # Sitemaps
-Sitemap: https://ha-solutions.tech/sitemap.xml
+Sitemap: https://cungcapgiaiphap.com/sitemap.xml

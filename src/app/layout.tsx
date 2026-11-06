@@ -3,10 +3,13 @@ import "./globals.built.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ha-solutions.tech"),
+  metadataBase: new URL("https://cungcapgiaiphap.com"),
   title: "HA-SOLUTIONS | Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
   description: "HA-SOLUTIONS đồng hành cùng doanh nghiệp hiện đại hóa vận hành, tinh gọn quy trình, kết nối hệ sinh thái phần mềm và ứng dụng trí tuệ nhân tạo (AI) thực tiễn.",
   keywords: [
+    "cung cấp giải pháp",
+    "cung cấp giải pháp công nghệ",
+    "cung cấp giải pháp chuyển đổi số",
     "chuyển đổi số",
     "phần mềm doanh nghiệp",
     "tự động hóa AI",
@@ -16,7 +19,7 @@ export const metadata: Metadata = {
     "enterprise AI",
     "custom software"
   ],
-  authors: [{ name: "HA-SOLUTIONS", url: "https://ha-solutions.tech" }],
+  authors: [{ name: "HA-SOLUTIONS", url: "https://cungcapgiaiphap.com" }],
   creator: "HA-SOLUTIONS",
   publisher: "HA-SOLUTIONS",
   icons: {
@@ -24,18 +27,18 @@ export const metadata: Metadata = {
     apple: "/logo.svg",
   },
   alternates: {
-    canonical: "https://ha-solutions.tech",
+    canonical: "https://cungcapgiaiphap.com",
     languages: {
-      "vi-VN": "https://ha-solutions.tech",
-      "en-US": "https://ha-solutions.tech",
-      "zh-CN": "https://ha-solutions.tech",
+      "vi-VN": "https://cungcapgiaiphap.com",
+      "en-US": "https://cungcapgiaiphap.com",
+      "zh-CN": "https://cungcapgiaiphap.com",
     },
   },
   openGraph: {
     type: "website",
     locale: "vi_VN",
-    url: "https://ha-solutions.tech",
-    siteName: "HA-SOLUTIONS",
+    url: "https://cungcapgiaiphap.com",
+    siteName: "HA-SOLUTIONS | Cung Cấp Giải Pháp Công Nghệ",
     title: "HA-SOLUTIONS | Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
     description: "HA-SOLUTIONS đồng hành cùng doanh nghiệp hiện đại hóa vận hành, tinh gọn quy trình, kết nối hệ sinh thái phần mềm và ứng dụng trí tuệ nhân tạo (AI) thực tiễn.",
     images: [
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "HA-SOLUTIONS - Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+        alt: "HA-SOLUTIONS - Đối Tác Chuyển Đổi Số & Cung Cấp Giải Pháp Công Nghệ Doanh Nghiệp",
       },
     ],
   },
@@ -72,27 +75,27 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://ha-solutions.tech/#organization",
+      "@id": "https://cungcapgiaiphap.com/#organization",
       "name": "HA-SOLUTIONS",
-      "url": "https://ha-solutions.tech",
+      "url": "https://cungcapgiaiphap.com",
       "logo": {
         "@type": "ImageObject",
-        "@id": "https://ha-solutions.tech/#logo",
-        "url": "https://ha-solutions.tech/logo.svg",
+        "@id": "https://cungcapgiaiphap.com/#logo",
+        "url": "https://cungcapgiaiphap.com/logo.svg",
         "caption": "HA-SOLUTIONS Logo",
       },
-      "image": "https://ha-solutions.tech/og-image.png",
-      "description": "Đối Tác Chuyển Đổi Số & Công Nghệ Thông Minh Cho Doanh Nghiệp",
+      "image": "https://cungcapgiaiphap.com/og-image.png",
+      "description": "Đối Tác Chuyển Đổi Số & Cung Cấp Giải Pháp Công Nghệ Thông Minh Cho Doanh Nghiệp",
       "email": "contact@ha-solutions.tech",
-      "sameAs": [],
+      "sameAs": ["https://ha-solutions.tech"],
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://ha-solutions.tech/#service",
-      "name": "HA-SOLUTIONS - Tư Vấn Chuyển Đổi Số & Giải Pháp AI Doanh Nghiệp",
-      "url": "https://ha-solutions.tech",
-      "logo": "https://ha-solutions.tech/logo.svg",
-      "image": "https://ha-solutions.tech/og-image.png",
+      "@id": "https://cungcapgiaiphap.com/#service",
+      "name": "HA-SOLUTIONS - Cung Cấp Giải Pháp Chuyển Đổi Số & AI Doanh Nghiệp",
+      "url": "https://cungcapgiaiphap.com",
+      "logo": "https://cungcapgiaiphap.com/logo.svg",
+      "image": "https://cungcapgiaiphap.com/og-image.png",
       "description": "Tư vấn kiến trúc giải pháp, thiết kế hệ thống phần mềm may đo, tự động hóa quy trình nghiệp vụ và tích hợp Agentic AI cho doanh nghiệp.",
       "email": "contact@ha-solutions.tech",
       "address": {
