@@ -984,8 +984,8 @@ export const en: TranslationDictionary = {
       badge: "REQUEST RECEIVED",
       title: "Thank You",
       message:
-        "A Senior Solutions Consultant at HA-SOLUTIONS will review your request and connect with you within one business day with an initial technical perspective.",
-      dispatchedTo: "Consultation request routed to engineering inbox:",
+        "A Senior Solutions Consultant will review your request and connect with you within one business day with an initial technical perspective.",
+      statusText: "Consultation request dispatched successfully to our solutions team.",
     },
   },
   modal: {
@@ -1008,6 +1008,7 @@ export const en: TranslationDictionary = {
     successTitle: "Consultation Requested",
     successDesc:
       "We have received your briefing details. Our architecture team will be in touch shortly.",
+    statusText: "Consultation request dispatched successfully to our solutions team.",
     doneBtn: "Done",
   },
   footer: {

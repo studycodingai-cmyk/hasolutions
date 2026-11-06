@@ -86,7 +86,7 @@ const jsonLd = {
       },
       "image": "https://cungcapgiaiphap.com/og-image.png",
       "description": "Đối Tác Chuyển Đổi Số & Cung Cấp Giải Pháp Công Nghệ Thông Minh Cho Doanh Nghiệp",
-      "email": "contact@ha-solutions.tech",
+      "email": "studycodingai@gmail.com",
       "sameAs": ["https://ha-solutions.tech"],
     },
     {
@@ -97,7 +97,7 @@ const jsonLd = {
       "logo": "https://cungcapgiaiphap.com/logo.svg",
       "image": "https://cungcapgiaiphap.com/og-image.png",
       "description": "Tư vấn kiến trúc giải pháp, thiết kế hệ thống phần mềm may đo, tự động hóa quy trình nghiệp vụ và tích hợp Agentic AI cho doanh nghiệp.",
-      "email": "contact@ha-solutions.tech",
+      "email": "studycodingai@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "VN",

@@ -956,8 +956,8 @@ export const zh: TranslationDictionary = {
       badge: "已成功接收您的咨询请求",
       title: "衷心感谢您的信任",
       message:
-        "HA-SOLUTIONS 资深解决方案架构师正在审阅您的业务背景，并将在 1 个工作日内通过邮件与您取得联系，预约开展专属深度探讨。",
-      dispatchedTo: "咨询确认函已分发至专家团队处理系统：",
+        "资深解决方案架构师正在审阅您的业务背景，并将在 1 个工作日内与您取得联系，开展专属深度探讨。",
+      statusText: "咨询请求已成功同步至专家团队接单系统。",
     },
   },
   modal: {
@@ -980,6 +980,7 @@ export const zh: TranslationDictionary = {
     successTitle: "已收到您的对接需求",
     successDesc:
       "我们已妥善记录您的业务诉求，资深技术架构师团队将尽快与您对接。",
+    statusText: "咨询请求已成功同步至专家团队接单系统。",
     doneBtn: "完成",
   },
   footer: {

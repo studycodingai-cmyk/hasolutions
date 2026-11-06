@@ -286,7 +286,7 @@ export interface FinalCTAContent {
     badge: string;
     title: string;
     message: string;
-    dispatchedTo: string;
+    statusText: string;
   };
 }
 
@@ -307,6 +307,7 @@ export interface ModalContent {
   successBadge: string;
   successTitle: string;
   successDesc: string;
+  statusText: string;
   doneBtn: string;
 }
 

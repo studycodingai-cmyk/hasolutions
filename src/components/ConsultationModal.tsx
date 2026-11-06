@@ -50,13 +50,35 @@ export default function ConsultationModal({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    try {
+      await fetch("https://formsubmit.co/ajax/studycodingai@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `[cungcapgiaiphap.com] Đặt lịch tư vấn (Modal) từ ${formState.name} - ${formState.company}`,
+          _template: "table",
+          _captcha: "false",
+          "Họ và tên": formState.name,
+          "Email liên hệ": formState.email,
+          "Doanh nghiệp / Tổ chức": formState.company,
+          "Lĩnh vực quan tâm": formState.service,
+          "Mục tiêu / Ghi chú": formState.notes || "Không có ghi chú thêm",
+          "Nguồn gửi": "Modal Đặt Lịch Tư Vấn - https://cungcapgiaiphap.com",
+          "Thời gian gửi": new Date().toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" }),
+        }),
+      });
+    } catch (err) {
+      console.error("Submission error:", err);
+    } finally {
       setIsSubmitting(false);
       setIsSubmitted(true);
-    }, 700);
+    }
   };
 
   const handleResetAndClose = () => {
@@ -216,8 +238,9 @@ export default function ConsultationModal({
             <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-sm mx-auto leading-relaxed">
               {t.modal.successDesc}
             </p>
-            <div className="mt-4 p-3 rounded-xl bg-[#091426] border border-slate-800 text-xs text-slate-400 font-mono">
-              Hòm thư tiếp nhận: <span className="text-cyan-300 font-bold">contact@ha-solutions.tech</span>
+            <div className="mt-4 p-3 rounded-xl bg-[#091426] border border-cyan-500/20 text-xs text-slate-300 font-mono flex items-center justify-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0" />
+              <span>{t.modal.statusText}</span>
             </div>
             <button
               onClick={handleResetAndClose}

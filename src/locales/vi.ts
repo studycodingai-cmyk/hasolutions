@@ -984,8 +984,8 @@ export const vi: TranslationDictionary = {
       badge: "ĐÃ TIẾP NHẬN YÊU CẦU",
       title: "Cảm Ơn Bạn",
       message:
-        "Chuyên viên tư vấn kiến trúc giải pháp của HA-SOLUTIONS sẽ xem xét thông tin và liên hệ với bạn trong vòng 1 ngày làm việc để bắt đầu phiên trao đổi.",
-      dispatchedTo: "Yêu cầu tư vấn đã được gửi tới hòm thư chuyên gia:",
+        "Chuyên viên tư vấn kiến trúc giải pháp sẽ xem xét thông tin và liên hệ với bạn trong vòng 1 ngày làm việc để bắt đầu phiên trao đổi.",
+      statusText: "Yêu cầu tư vấn đã được chuyển thành công đến đội ngũ tiếp nhận.",
     },
   },
   modal: {
@@ -1008,6 +1008,7 @@ export const vi: TranslationDictionary = {
     successTitle: "Đã Tiếp Nhận Thông Tin",
     successDesc:
       "Chúng tôi đã ghi nhận thông tin yêu cầu của bạn. Đội ngũ chuyên gia kiến trúc sẽ sớm liên hệ.",
+    statusText: "Yêu cầu tư vấn đã được chuyển thành công đến đội ngũ tiếp nhận.",
     doneBtn: "Hoàn Tất",
   },
   footer: {
